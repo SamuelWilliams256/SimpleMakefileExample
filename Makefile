@@ -1,4 +1,11 @@
-CC=g++
+CC = g++
+OBJS = main.o dependency.o
 
-all:
-	$(CC) -o main dependency.cpp main.cpp
+all: $(OBJS)
+	$(CC) -o main dependency.o main.o
+
+main.o:
+	$(CC) -c main.cpp
+
+dependency.o:
+	$(CC) -c dependency.cpp
