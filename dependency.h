@@ -3,6 +3,12 @@
 
 #include <string>
 
-std::string hello_world = "Hello world!\n";
+class my_hello_world_class
+{
+public:
+   my_hello_world_class();
+   std::string hello_world;
+};
+
 
 #endif
