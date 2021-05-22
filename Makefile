@@ -1,12 +1,14 @@
 CC = g++
-OBJS = main.o dependency.o
 TARGET = hello_world
 
-all: $(OBJS)
-	$(CC) -o $(TARGET) dependency.o main.o
+SOURCE_DIR = source/
+BUILD_DIR = build/
 
-main.o:
-	$(CC) -c main.cpp
+all: main.o
+	$(CC) -o $(BUILD_DIR)/$(TARGET) $(BUILD_DIR)dependency.o $(BUILD_DIR)/main.o
+
+main.o: dependency.o
+	$(CC) -c $(SOURCE_DIR)main.cpp -o $(BUILD_DIR)/main.o
 
 dependency.o:
-	$(CC) -c dependency.cpp
+	$(CC) -c $(SOURCE_DIR)dependency.cpp -o $(BUILD_DIR)/dependency.o
