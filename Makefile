@@ -1,2 +1,4 @@
+CC=g++
+
 all:
-	g++ -o executable dependency.cpp main.cpp
+	$(CC) -o main dependency.cpp main.cpp
