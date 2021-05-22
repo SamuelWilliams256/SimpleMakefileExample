@@ -3,9 +3,10 @@ TARGET = hello_world
 
 SOURCE_DIR = source/
 BUILD_DIR = build/
-OBJS = main.o dependency.o
 
-all: $(OBJS)
+$(shell mkdir -p $(BUILD_DIR))
+
+all: main.o dependency.o
 	$(CC) -o $(BUILD_DIR)/$(TARGET) $(BUILD_DIR)dependency.o $(BUILD_DIR)/main.o
 
 main.o:
