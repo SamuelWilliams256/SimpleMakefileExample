@@ -3,12 +3,12 @@
 
 #include <string>
 
-class my_hello_world_class
+class MyHelloWorldClass
 {
 public:
-   my_hello_world_class();
+   MyHelloWorldClass();
    std::string hello_world;
 };
 
-
 #endif
+

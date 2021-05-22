@@ -12,3 +12,4 @@ main.o: dependency.o
 
 dependency.o:
 	$(CC) -c $(SOURCE_DIR)dependency.cpp -o $(BUILD_DIR)/dependency.o
+
